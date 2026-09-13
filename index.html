@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Навигационная шапка -->
+    <header class="navbar">
+        <nav class="nav-links">
+            <button class="nav-item active" onclick="openTab(event, 'home')">Home</button>
+            <button class="nav-item" onclick="openTab(event, 'news')">News</button>
+            <button class="nav-item" onclick="openTab(event, 'geography')">Geography</button>
+            <button class="nav-item" onclick="openTab(event, 'mathematics')">Mathematics</button>
+            <button class="nav-item" onclick="openTab(event, 'self-education')">Self-Education</button>
+        </nav>
+    </header>
+
+    <!-- Содержимое вкладок -->
+    <main class="content-container">
+
+        <!-- Вкладка: Главная -->
+        <section id="home" class="tab-content active">
+            <h1 class="title">Welcome to the Educational Website</h1>
+            <p class="subtitle">Here you will learn everything</p>
+
+            <div class="cards-grid">
+                <div class="feature-card" onclick="switchTabDirect('news')">
+                    <div class="card-icon">📰</div>
+                    <h3>News</h3>
+                    <p>Top international and independent news channels on YouTube.</p>
+                </div>
+
+                <div class="feature-card" onclick="switchTabDirect('geography')">
+                    <div class="card-icon">🌍</div>
+                    <h3>Geography</h3>
+                    <p>Explore maps, global countries, landscapes, and physical geography.</p>
+                </div>
+
+                <div class="feature-card" onclick="switchTabDirect('mathematics')">
+                    <div class="card-icon">📐</div>
+                    <h3>Mathematics</h3>
+                    <p>Master formulas, algebra, geometry, and step-by-step solutions with AI.</p>
+                </div>
+
+                <div class="feature-card" onclick="switchTabDirect('self-education')">
+                    <div class="card-icon">🚀</div>
+                    <h3>Self-Education</h3>
+                    <p>Guides, recommended books, tutorials, and practical tips.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Вкладка: News -->
+        <section id="news" class="tab-content">
+            <h2 class="section-title">Global News Channels</h2>
+            <p class="section-text">Follow trusted international and independent news sources on YouTube.</p>
+
+            <div class="news-channels-grid">
+                <!-- ABC News -->
+                <a href="https://youtube.com/@abcnews?si=N8_348AOxJl8aaLQ" target="_blank" class="channel-card">
+                    <div class="channel-header">
+                        <span class="country-badge us">US</span>
+                        <span class="platform-tag">YouTube</span>
+                    </div>
+                    <h3>ABC News</h3>
+                    <p>American news network providing breaking news, in-depth reporting, and live updates.</p>
+                    <span class="watch-btn">Watch Channel →</span>
+                </a>
+
+                <!-- BBC News -->
+                <a href="https://youtube.com/@bbcnews?si=23ch7k22V6ROU1U3" target="_blank" class="channel-card">
+                    <div class="channel-header">
+                        <span class="country-badge us">US / INT</span>
+                        <span class="platform-tag">YouTube</span>
+                    </div>
+                    <h3>BBC News</h3>
+                    <p>World news coverage, documentaries, analysis, and international broadcasts.</p>
+                    <span class="watch-btn">Watch Channel →</span>
+                </a>
+
+                <!-- CNN -->
+                <a href="https://youtube.com/@cnn?si=Xf-lyJOJkT2BNbDJ" target="_blank" class="channel-card">
+                    <div class="channel-header">
+                        <span class="country-badge us">US</span>
+                        <span class="platform-tag">YouTube</span>
+                    </div>
+                    <h3>CNN</h3>
+                    <p>Major US news organization delivering global headlines and political analysis.</p>
+                    <span class="watch-btn">Watch Channel →</span>
+                </a>
+
+                <!-- Sky News -->
+                <a href="https://youtube.com/@skynews?si=Yph6Yp8u7DDNVWS7" target="_blank" class="channel-card">
+                    <div class="channel-header">
+                        <span class="country-badge uk">UK</span>
+                        <span class="platform-tag">YouTube</span>
+                    </div>
+                    <h3>Sky News</h3>
+                    <p>British free-to-air television news channel delivering top UK and world events.</p>
+                    <span class="watch-btn">Watch Channel →</span>
+                </a>
+
+                <!-- NEXTA Live -->
+                <a href="https://youtube.com/@nextalive?si=5d9TLvyoE74J2_Jc" target="_blank" class="channel-card">
+                    <div class="channel-header">
+                        <span class="country-badge ru">RU</span>
+                        <span class="platform-tag">YouTube</span>
+                    </div>
+                    <h3>NEXTA Live</h3>
+                    <p>Independent Eastern European news channel broadcasting in Russian language.</p>
+                    <span class="watch-btn">Watch Channel →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Вкладка: Geography -->
+        <section id="geography" class="tab-content">
+            <h2 class="section-title">World Geography Game</h2>
+            <p class="section-text">Test your geography skills and explore the world interactively.</p>
+
+            <div class="geography-grid">
+                <a href="https://www.geoguessr.com/" target="_blank" class="geo-card single-card">
+                    <div class="geo-icon">📍</div>
+                    <div class="geo-badge game">Game</div>
+                    <h3>GeoGuessr</h3>
+                    <p>Test your geographical intuition by exploring random locations around the globe using panoramic Google Street View. Look for clues like signs, landscapes, and architecture to guess where you are!</p>
+                    <span class="geo-link">Play GeoGuessr →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Вкладка: Mathematics -->
+        <section id="mathematics" class="tab-content">
+            <h2 class="section-title">Mathematics & AI Assistants</h2>
+            <p class="section-text">Interactive geometry tools and AI assistants to solve complex math problems step-by-step.</p>
+
+            <div class="math-grid">
+                <!-- GeoGebra -->
+                <a href="https://www.geogebra.org/" target="_blank" class="math-card">
+                    <div class="math-icon">📐</div>
+                    <div class="math-badge tool">Interactive</div>
+                    <h3>GeoGebra Dynamic Math</h3>
+                    <p>Powerful interactive tool for exploring geometry, algebra, spreadsheets, graphing, statistics, and 3D math in real-time.</p>
+                    <span class="math-link">Launch GeoGebra →</span>
+                </a>
+
+                <!-- ChatGPT -->
+                <a href="https://chatgpt.com/" target="_blank" class="math-card">
+                    <div class="math-icon">🤖</div>
+                    <div class="math-badge ai-gpt">AI Tutor</div>
+                    <h3>ChatGPT</h3>
+                    <p>Ask questions, analyze math problems, get step-by-step solutions, and explain complex formulas in simple terms.</p>
+                    <span class="math-link">Ask ChatGPT →</span>
+                </a>
+
+                <!-- Google Gemini -->
+                <a href="https://gemini.google.com/" target="_blank" class="math-card">
+                    <div class="math-icon">✨</div>
+                    <div class="math-badge ai-gemini">AI Assistant</div>
+                    <h3>Google Gemini</h3>
+                    <p>Advanced AI assistant capable of breaking down algebra, calculus, logic problems, and homework step-by-step.</p>
+                    <span class="math-link">Open Gemini →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Вкладка: Self-Education -->
+        <section id="self-education" class="tab-content">
+            <h2 class="section-title">Self-Education & Skills</h2>
+            <p class="section-text">Interactive courses, video tutorials, coding platforms, and practical skills for personal development.</p>
+
+            <div class="edu-grid">
+                <!-- Rubik's Cube Playlist -->
+                <a href="https://youtube.com/playlist?list=PLghedgfwuoYN-VU94kXFyi-bujBwqEoUp&si=yzDon1VFoAdytYJY" target="_blank" class="edu-card">
+                    <div class="edu-icon">🧩</div>
+                    <div class="edu-badge cube">Tutorial</div>
+                    <h3>How to Solve a Rubik's Cube</h3>
+                    <p>Complete step-by-step YouTube video tutorial playlist teaching algorithms, techniques, and intuitive methods to assemble a 3x3 Rubik's Cube.</p>
+                    <span class="edu-link">Watch Playlist →</span>
+                </a>
+
+                <!-- Coursera -->
+                <a href="https://www.coursera.org/" target="_blank" class="edu-card">
+                    <div class="edu-icon">🎓</div>
+                    <div class="edu-badge university">Courses</div>
+                    <h3>Coursera</h3>
+                    <p>Online courses and specializations from top universities like Stanford, Yale, and leading tech companies.</p>
+                    <span class="edu-link">Explore Courses →</span>
+                </a>
+
+                <!-- Duolingo -->
+                <a href="https://www.duolingo.com/" target="_blank" class="edu-card">
+                    <div class="edu-icon">🦉</div>
+                    <div class="edu-badge language">Languages</div>
+                    <h3>Duolingo</h3>
+                    <p>Gamified language-learning platform to practice vocabulary, grammar, and speaking in bite-sized daily lessons.</p>
+                    <span class="edu-link">Start Learning →</span>
+                </a>
+
+                <!-- freeCodeCamp -->
+                <a href="https://www.freecodecamp.org/" target="_blank" class="edu-card">
+                    <div class="edu-icon">💻</div>
+                    <div class="edu-badge code">Coding</div>
+                    <h3>freeCodeCamp</h3>
+                    <p>Free interactive coding lessons, web development tutorials, algorithms, and real-world project certifications.</p>
+                    <span class="edu-link">Start Coding →</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
